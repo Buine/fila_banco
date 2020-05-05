@@ -23,13 +23,17 @@ public class Cola {
     
     public void agregar(char tipo, int monto){
         Nodo nuevo = new Nodo(tipo, monto);
-        Nodo aux = this.cab;
-        for(int i = 0; i < this.cant-1; i++){
-            aux = aux.getSig();
+        if(!estaVacia()){
+            Nodo aux = this.cab;
+            for(int i = 0; i < this.cant-1; i++){
+                aux = aux.getSig();
+            }
+            aux.setSig(nuevo);
+            this.cant++;
+            System.out.println("Se ha agregado correctamente.");
+        } else {
+            this.cab = nuevo;
         }
-        aux.setSig(nuevo);
-        this.cant++;
-        System.out.println("Se ha agregado correctamente.");
     }
     
     public void impirmir_cola(){
