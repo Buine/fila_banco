@@ -14,10 +14,10 @@ public class Nodo {
     private int dato;
     private Nodo sig;
 
-    public Nodo(char t, int d, Nodo sig) {
+    public Nodo(char t, int d) {
         this.tipo = t;
         this.dato = d;
-        this.sig = sig;
+        this.sig = null;
     }
 
     public char getTipo() {
