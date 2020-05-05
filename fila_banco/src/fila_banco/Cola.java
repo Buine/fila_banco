@@ -29,11 +29,11 @@ public class Cola {
                 aux = aux.getSig();
             }
             aux.setSig(nuevo);
-            this.cant++;
             System.out.println("Se ha agregado correctamente.");
         } else {
             this.cab = nuevo;
         }
+        this.cant++;
     }
     
     public void impirmir_cola(){
@@ -41,7 +41,7 @@ public class Cola {
             Nodo aux = this.cab;
             System.out.println("Cola:");
             for(int i = 0; i < this.cant; i++){
-                System.out.println("[Puesto "+(i+1)+"] Tipo: "+this.cab.getTipo()+", Monto: $"+this.cab.getDato());
+                System.out.println("[Puesto "+(i+1)+"] Tipo: "+aux.getTipo()+", Monto: $"+aux.getDato());
                 aux = aux.getSig();
             }
         }
